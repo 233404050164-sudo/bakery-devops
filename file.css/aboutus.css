@@ -1,0 +1,771 @@
+body{
+    background-color: #f9f3f8;
+    width: 100% ;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+.main-header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 10px 40px;
+    width:100%;
+    box-sizing: border-box;
+    background-color: #f9f3f8;
+    height:100px ;
+    gap: 10px;
+    
+}
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Allows items to jump to a new line */
+        padding: 15px;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search-container {
+        order: 3; /* Moves search bar to the bottom row */
+        width: 80%; /* Makes search bar wider */
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    /* Reset the header to stack vertically */
+    .main-header {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    /* Reset margins that are pusing things off-screen */
+    .nav-links, .search-container, .logo, .cake-icon {
+        margin: 0 !important; 
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Fix the Strawbery Cake image size */
+    .straw {
+        width: 100%; /* Make the cake fit the screen width */
+        height: auto; /* Keep the aspect ratio */
+    }
+    #sugges{
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+        display: block;
+    }
+.search-container{
+    position: relative;
+    margin-top: 20px !important;
+    width: 90%;
+    align-self: center;
+}
+    /* Fix the text description */
+    #describe {
+        margin-left: 0; /* Remove the 4rem pushing it right */
+        max-width: 100%;
+        font-size: 1rem; /* Make it readable */
+    }
+}
+@media (max-width: 768px) {
+    .page1 {
+        flex-direction: column; /* Stacks text on top of image */
+        text-align: center;
+        padding: 30px;
+    }
+
+    .image-cake1 {
+        text-align: center;
+        order: 2; /* Ensures image stays below text */
+    }
+
+    .cta-group {
+        justify-content: center; /* Centers the button and phone info */
+    }
+
+    #straw {
+        font-size: 2.5rem;
+    }
+    
+}
+@media (max-width: 480px) {
+    .page1 {
+        padding: 20px 15px;
+    }
+
+    #straw {
+        font-size: 2rem;
+    }
+  
+    #describe {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Stack the button and phone number vertically on small phones */
+    .cta-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-order {
+        width: 100%; /* Full width button is easier to tap */
+        padding: 12px;
+    }
+
+    .image-cake1 img {
+        width: 80%; /* Shrink image slightly so it's not overwhelming */
+    }
+}
+.logo{
+    display: flex;
+    gap: 0;
+    margin: none;
+
+
+}
+.cake-icon{
+    display: flex;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    gap: 20rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: black;
+    margin-left:25rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-left: 0;
+}
+.nav-links a:hover{
+   color: #dd00ae;
+}
+.icons{
+    display: flex;
+    font-size: 1.5rem;
+    gap: 8px;
+    color: black;
+    margin-right: 2rem;
+}
+ .icons a:hover{
+    color: #dd00ae
+ }
+.search-container{
+    font-size: 1.5rem;
+    display: flex;
+    border: 2px solid #e57eff;
+    border-radius: 25px;
+    padding: 5px 15px;
+    background: white;
+    box-shadow: 3px 3px 0px #ff66c4;
+    margin-top: 0;
+
+}
+.menu-items a {
+    margin-right: 1rem;
+    gap: 0.5rem;
+}
+
+.glass{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+main{
+    margin-top: 2rem;
+}
+.store-img{
+    width: 100%;
+   margin: 0;
+   padding: 0;
+    line-height: 0;
+    
+}
+
+#store-img{
+    width: 100%;
+    height: auto;
+    display: block;
+    
+}
+
+.our-dcr{
+    background-color: #fffef8;
+     z-index: 1;
+     width: 50%;
+     height: 20rem;
+     border-radius: 25px;
+     margin-top: 1rem;
+
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+    
+}
+
+.our-dcr h2{
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    margin-top: 2rem;
+}
+
+.our-dcr p{
+    text-align: center;
+    width: 80%;
+    line-height: 1.6;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+.ours-content{
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    justify-content: center;
+    gap: 1rem;
+}
+#ours-img{
+    margin-top: 1rem;
+    width: 600px;
+    height: 80%;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .ours-content {
+        flex-direction: column; /* Stacks the text and image vertically */
+        text-align: center;
+    }
+
+    .our-dcr {
+        width: 90%;          /* Make the text box wider on small screens */
+        height: auto;        /* Let the height grow with the text */
+        margin-bottom: 2rem; /* Add space before the image starts */
+    }
+
+    .our-dcr p {
+        width: 100%;         /* Let the text use the full width of the box */
+        padding: 0 1rem;     /* Add a little breathing room on the sides */
+    }
+
+    #ours-img {
+        width: 100%;         /* Make the cake image full width on mobile */
+    }
+}
+@media (max-width: 480px) {
+    .ours-content {
+        padding: 1rem; /* Less padding so the content fills more of the screen */
+        gap: 15px;
+    }
+
+    .our-dcr {
+        width: 100%;       /* Box takes the full width of the screen */
+        border-radius: 15px; /* Slightly smaller corners for a cleaner mobile look */
+        padding: 1.5rem 0.5rem; /* Internal spacing for the text */
+    }
+
+    .our-dcr h2 {
+        font-size: 1.5rem;  /* Shrink the title slightly so it fits on one line */
+        margin-top: 1rem;
+    }
+
+    .our-dcr p {
+        width: 90%;         /* Let text breathe but fill the box */
+        font-size: 0.95rem; /* Slightly smaller text for better readability */
+        line-height: 1.5;
+    }
+
+    #ours-img {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+.ours-story{
+    width: 100%;
+    justify-content: center;
+    padding: 50px 0;
+    margin-top: 3rem;
+   
+}
+.ours-story1{
+    background-color: #b09d8e;
+    display: flex;
+    align-items: center;
+    width: 85% !important;
+    border-radius: 20px;
+   
+
+}
+.ours-story2{
+    background-color: #9e501b;
+    display: flex;
+    align-items: center;
+    width:85% !important;
+    border-radius: 20px;
+    
+}
+.ours-story3{
+    background-color:#bcb083;
+    display: flex;
+    align-items: center;
+    width:85% !important;
+    border-radius: 20px;
+    
+}
+
+
+#img-1{
+    margin-left: 3rem;
+    width: 55rem;
+    border-radius: 20px;
+    z-index: 1;
+
+}
+
+.text-box {
+            background-color: #ffde59; /* The light off-white color from the image */
+            padding: 40px 30px; /* Space inside the box, top/bottom and left/right */
+            position: relative; /* Needed for the shape overlay */
+            box-sizing: border-box; /* Ensures padding doesn't affect final width */
+           filter: drop-shadow(3px 3px 3px black) 
+                    drop-shadow(5px 5px 5px black);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%, 0% 100%);
+            width: 12rem;
+            height: fit-content;
+            
+        }
+.text-box::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+   
+}
+
+.box-title{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 2px;
+
+}
+.box-content{
+    font-family: 'Playfair Display';
+}
+.ours-story1,.ours-story2, .ours-story3{
+    display: none;
+    cursor: pointer;
+}
+
+.ours-story .active{
+    display: flex;
+
+}
+.ours-story1.active, .ours-story2.active, .ours-story3.active {
+    display: flex; /* Or whatever display you were using */
+}
+
+.text-box {
+    /* Existing styles you have */
+    background-color: #faf6f0;
+    padding: 40px 30px;
+    position: relative;
+    width: 12rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%, 0% 100%);
+    
+    /* 1. Add the transition property here */
+    transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    
+    /* Ensure it starts at base level */
+    transform: translateY(0);
+}
+
+/* 2. The Hover Effect */
+.text-box:hover {
+    /* Lifts the ribbon up slightly */
+    transform: translateY(-10px); 
+    
+    /* Makes the background slightly brighter */
+    background-color: #ffffff; 
+    
+    /* Adds a "glow" or shadow effect that follows the clipped shape */
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* 3. The Click Effect (Optional) */
+.text-box:active {
+    transform: translateY(-2px); /* Pushes it back down slightly when pressed */
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1));
+}
+
+/* Container must be relative so stories can stack on top of each other */
+.ours-story {
+    position: relative;
+    min-height: 500px; /* Adjust based on your content height */
+}
+
+/* Base style for all story sections */
+.ours-story1, .ours-story2, .ours-story3 {
+    position: absolute; /* Stack them on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    /* The "Smooth" Magic */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+    transform: translateY(10px); /* Starts slightly lower for a "rise" effect */
+}
+
+/* Style for the active story */
+.ours-story .active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Moves up to its natural position */
+}
+
+/* Tablet Styles (768px) */
+@media (max-width: 768px) {
+    .ours-story1, .ours-story2, .ours-story3 {
+        flex-direction: column; /* Stacks text on top of image */
+        width: 90% !important;  /* Give it a bit more room on smaller screens */
+        padding: 20px;
+        text-align: center;
+        margin: 0 auto 20px auto; /* Centers the block and adds bottom spacing */
+    }
+
+    #img-1 {
+        width: 100% !important; /* Image fills the 90% width */
+        margin-left: 0;         /* Remove the left margin so it centers */
+        margin-top: 20px;       /* Add space between text box and image */
+    }
+
+    .text-box {
+        width: 80%;             /* Make the ribbon wider to fit the text better */
+        margin: 0 auto;         /* Center the ribbon */
+    }
+}
+
+/* Mobile Styles (480px) */
+@media (max-width: 480px) {
+    .ours-story1, .ours-story2, .ours-story3 {
+        width: 95% !important;  /* Use almost full width on tiny screens */
+        padding: 15px;
+    }
+
+    .box-title {
+        font-size: 1.5rem;      /* Shrink font size slightly */
+    }
+
+    .box-content {
+        font-size: 0.9rem;      /* Make text more readable on mobile */
+    }
+
+    .text-box {
+        width: 90%;
+        padding: 20px 15px;
+    }
+    
+    #img-1 {
+        width: 100% !important;
+    }
+}
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+   .main-header {
+        z-index: auto !important; /* Resets to default */
+        /* OR */
+        z-index: 0 !important;    
+        
+        /* If your header is "sticky" or "fixed", 
+           you might also want to change the position */
+        position: relative; 
+    }
+}
+/* Tablet and Mobile */
+@media (max-width: 480px) {
+    .main-header {
+        z-index: auto !important; /* Resets to default */
+        /* OR */
+        z-index: 0 !important;    
+        
+        /* If your header is "sticky" or "fixed", 
+           you might also want to change the position */
+        position:absolute; 
+    }
+}
+#cursor-label {
+    position: fixed; /* Follows the mouse relative to the screen */
+    padding: 8px 12px;
+    background-color: #ffde59; /* Matching your yellow text-box */
+    color: #333;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none; /* Crucial: stops the label from blocking clicks */
+    display: none;        /* Hidden by default */
+    z-index: 9999;        /* Always on top */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transform: translate(15px, 15px); /* Offsets it slightly from the pointer */
+}
+
+.founder{
+    margin-bottom: 2rem;
+    
+}
+.card {
+    background-color: #bcb083; /* Coral background from your example */
+    width: 900px;
+    height: fit-content ;
+    padding: 40px;
+    border-radius: 40px; /* Smooth rounded corners for the main card */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Makes the image a perfect circle */
+    object-fit: cover; /* Prevents stretching of your photo */
+    border: 5px solid white; /* Optional: adds a border like the placeholder */
+    background-color: white;
+}
+
+.content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px; /* Rounded corners for the white text box */
+    line-height: 1.6;
+    color: #333;
+}
+
+.content h3 {
+    margin-top: 0;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* --- Tablet View (768px and below) --- */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%; /* Let the card breathe on smaller screens */
+        flex-direction: column; /* Stack image on top of text */
+        text-align: center; /* Center the text for a better look */
+        padding: 30px;
+    }
+
+    .profile-image img {
+        width: 200px; /* Slightly smaller photo */
+        height: 200px;
+    }
+
+    .content {
+        padding: 20px;
+        margin-top: 10px;
+    }
+}
+
+/* --- Mobile View (480px and below) --- */
+@media screen and (max-width: 480px) {
+    .card {
+        width: 95%;
+        padding: 20px;
+        border-radius: 20px; /* Smaller radius for smaller screens */
+    }
+
+    .profile-image img {
+        width: 150px; /* Compact photo for mobile */
+        height: 150px;
+    }
+
+    .content {
+        font-size: 0.9rem; /* Slightly smaller text for readability */
+        border-radius: 15px;
+    }
+
+    .content h3 {
+        font-size: 1.1rem;
+    }
+}
+footer{
+    background-color:#fffae6 ;
+    width: 100% ;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+     gap: 13rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#foot-logo{
+    margin-top: 3rem;
+    margin-left: 5rem;
+    height: 110px;
+    width: 140px;
+}
+
+.foot-dis p{
+    width: 22rem;
+    text-align: center;
+    font-size: 12px;
+    font-family:  "Cormorant Garamond", serif;
+    font-weight:800;
+}
+
+.foot-our{
+    margin-top: 3rem;
+    
+}
+.foot-our p{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.foot-our h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.foot-follow{
+    margin-top: 3rem;
+}
+.foot-follow h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.foot-follow .icon-social{
+     margin-top: 2.5rem;
+    justify-self: center;
+    font-size: 2.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.foot-follow p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 3rem ;
+}
+@media (max-width: 768px) {
+    /* Stack the footer columns so they don't look squashed */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; /* Space between the stacked sections */
+    }
+
+    .foot-dis, .foot-our, .foot-follow {
+        max-width: 90%; /* Let sections take up more width */
+        text-align: center;
+    }
+
+    .h1-section4 {
+        font-size: 2.2rem;
+    }
+
+    /* Keep news row-based but slightly smaller padding */
+    .news {
+        width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    footer {
+        /* Reduce the big gap from tablet to save vertical space */
+        gap: 25px; 
+        padding: 30px 15px;
+    }
+
+    /* Make the logo a bit smaller so it doesn't take over the screen */
+    #foot-logo {
+        width: 120px;
+    }
+
+    /* Improve readability for the description */
+    #foot-pagra {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+
+    /* Shrink the headings so they fit on one line */
+    .foot-our h1, .foot-follow h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Make the contact info text slightly smaller */
+    .foot-our p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust social icons for thumb-tapping */
+    .foot-follow .icon-social {
+        font-size: 2rem; /* Slightly smaller than desktop but still easy to tap */
+        margin: 0 8px;
+    }
+
+    /* Ensure the copyright text isn't floating too far away */
+    .copyright-text {
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+}

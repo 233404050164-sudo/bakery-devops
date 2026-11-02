@@ -1,0 +1,807 @@
+body{
+    background-color: #f9f3f8;
+    width: 100% ;
+    overflow-x: hidden;
+    
+}
+.main-header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 10px 40px;
+    width:100%;
+    box-sizing: border-box;
+    background-color: #f9f3f8;
+    height:100px ;
+    gap: 10px;
+    
+}
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Allows items to jump to a new line */
+        padding: 15px;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search-container {
+        order: 3; /* Moves search bar to the bottom row */
+        width: 80%; /* Makes search bar wider */
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    /* Reset the header to stack vertically */
+    .main-header {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    /* Reset margins that are pusing things off-screen */
+    .nav-links, .search-container, .logo, .cake-icon {
+        margin: 0 !important; 
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Fix the Strawbery Cake image size */
+    .straw {
+        width: 100%; /* Make the cake fit the screen width */
+        height: auto; /* Keep the aspect ratio */
+    }
+    #sugges{
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+        display: block;
+    }
+.search-container{
+    position: relative;
+    margin-top: 20px !important;
+    width: 90%;
+    align-self: center;
+}
+    /* Fix the text description */
+    #describe {
+        margin-left: 0; /* Remove the 4rem pushing it right */
+        max-width: 100%;
+        font-size: 1rem; /* Make it readable */
+    }
+}
+@media (max-width: 768px) {
+    .page1 {
+        flex-direction: column; /* Stacks text on top of image */
+        text-align: center;
+        padding: 30px;
+    }
+
+    .image-cake1 {
+        text-align: center;
+        order: 2; /* Ensures image stays below text */
+    }
+
+    .cta-group {
+        justify-content: center; /* Centers the button and phone info */
+    }
+
+    #straw {
+        font-size: 2.5rem;
+    }
+    
+}
+@media (max-width: 480px) {
+    .page1 {
+        padding: 20px 15px;
+    }
+
+    #straw {
+        font-size: 2rem;
+    }
+  
+    #describe {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Stack the button and phone number vertically on small phones */
+    .cta-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-order {
+        width: 100%; /* Full width button is easier to tap */
+        padding: 12px;
+    }
+
+    .image-cake1 img {
+        width: 80%; /* Shrink image slightly so it's not overwhelming */
+    }
+}
+.logo{
+    display: flex;
+    gap: 0;
+
+
+}
+.cake-icon{
+    display: flex;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    gap: 20rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: black;
+    margin-left:25rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-left: 0;
+}
+.nav-links a:hover{
+   color: #dd00ae;
+}
+.icons{
+    display: flex;
+    font-size: 1.5rem;
+    gap: 8px;
+    color: black;
+    margin-right: 2rem;
+}
+ .icons a:hover{
+    color: #dd00ae
+ }
+.search-container{
+    font-size: 1.5rem;
+    display: flex;
+    border: 2px solid #e57eff;
+    border-radius: 25px;
+    padding: 5px 15px;
+    background: white;
+    box-shadow: 3px 3px 0px #ff66c4;
+    margin-top: 0;
+
+}
+.menu-items a {
+    margin-right: 1rem;
+    gap: 0.5rem;
+}
+/* Basic Navbar Styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-links li a {
+  display: block;
+  color: black;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Hide the dropdown menu by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.dropdown-content li a {
+  color: black;
+  padding: 12px 16px;
+}
+
+/* Show the menu when hovering over the parent 'li' */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change link color on hover */
+.dropdown-content li a:hover {
+  background-color: #ddd;
+}
+
+.glass{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+.page1{
+    display: flex;
+    margin-top: 3.5rem;
+    justify-content: center;
+    min-height: auto;
+    gap: 1.5rem;
+    width:100% ;
+}
+.text-content{
+   flex: 0 1 auto;
+   margin: 2rem;
+}
+    
+#straw{
+    font-size: 3rem;
+    color: #ff877d;
+     font-family: "Playfair Display", serif;
+     margin: 10px 0;
+     margin-top: 0.4rem;
+}
+.btn-order{
+    padding: 5px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right:7rem;
+}
+.btn-order:hover{
+    background-color: #ff66c4 ;
+}
+.phone-inf{
+    display: flex;
+    align-items: center;
+    gap:  10px;
+   
+}
+.cta-group{
+    flex-direction: row;
+    display: flex;
+    margin-top: 5rem;
+    font-size: 15px;
+}
+.straw{
+  height: 35rem;
+  width: 39rem;
+    margin-top: 0.5rem;
+    
+}
+#sugges{
+    font-weight: bold;
+    font-family: "Cormorant Garamond", serif;
+}
+#describe{
+   margin-left: 4rem;
+   text-align: center;
+   max-width: 17rem;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 0.7rem;
+   line-height: 1.0;
+
+}
+.section-2{
+    margin-top: 4rem;
+
+}
+.roll-image img{
+    display: flex;
+    height: 10rem;
+    border: 1.5px solid #ff877d;
+    filter: grayscale(0);
+    cursor: pointer;
+    transition: transform 0.5s;
+    border-radius: 10px;
+}
+.roll-image img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+    
+}
+.roll-image{
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: smooth;
+    display:flex ;
+    width: 45rem;
+    background-color:white;
+    border: 3.2px solid #ff66c4;
+    padding: 15px 15px;
+    border-radius: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 1rem;
+    
+}
+
+.roll-image::-webkit-scrollbar{
+    display: none;
+}
+.btn-roll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    gap: 3rem;
+}
+.btn-roll button{
+    padding: none;
+   background-color: #f9f3f8;
+    border: none;
+}
+
+.btn-roll button i{
+    font-size: 2rem;
+    color: #dd00ae;
+    cursor: pointer;
+    opacity: 0;
+}
+.btn-roll button i:hover{
+    color: hsl(313, 100%, 48%);
+    opacity: 1;
+}
+.h1-section2{
+   text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    color: black;
+    font-size: 3.1rem;
+    font-weight: 600;
+
+}
+.name-tash{
+    text-align: center;
+    margin-left: 0.01rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+}
+
+.dot-3{
+   text-align: center;
+    font-size: 2rem;
+   color: hsl(323, 100%, 61%);
+}
+
+
+.card-cake .count-container {
+    color:#ff66c4;
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.count-container button, .count-container input{
+    color: #ff66c4;
+    background: white;
+    justify-items: center;
+    width: 1.5rem;
+    gap: 0.1rem;
+    margin: 0;
+    cursor: pointer;
+    border-top: none;
+    border-right:none ;
+    border-left: 1px solid black ;
+}
+.count-container .count{
+    border: 1px solid black;
+    border-left: none;
+    
+}
+
+
+.section-3{
+    margin-top: 5rem;
+}
+.line-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;      /* Force 1 line on desktop */
+    justify-content: center; /* Center the group of cards */
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.line-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;      /* Force 1 line on desktop */
+    justify-content: center; /* Center the group of cards */
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.line-3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;      /* Force 1 line on desktop */
+    justify-content: center; /* Center the group of cards */
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-cake {
+    display: flex;          /* Changed from inline-flex to flex */
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+    /* Responsive Width Logic */
+    width: 100%;            
+    max-width: 15rem;       /* Limits how big it can get */
+    height: 20rem;          /* Increased slightly to fit content */
+    
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Added a soft shadow */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 3. The Image */
+.card-cake img {
+    width: 100%;            /* Make image responsive to card width */
+    height: 10rem;
+    object-fit: cover;      /* Prevents stretching */
+    border-radius: 15px;
+    margin-top: 0.7rem;
+}
+
+/* 4. The Responsive Media Queries */
+
+/* Tablet View: 2 cards per row */
+@media (max-width: 1024px) {
+    .line-1 {
+        flex-wrap: wrap;    /* Allow cards to wrap to next line */
+        justify-content: center;
+    }
+    
+    .card-cake {
+        flex: 0 1 calc(50% - 20px); /* Take up roughly half the width */
+    }
+}
+@media (max-width: 1024px) {
+    .line-2 {
+        flex-wrap: wrap;    /* Allow cards to wrap to next line */
+        justify-content: center;
+    }
+    
+    .card-cake {
+        flex: 0 1 calc(50% - 20px); /* Take up roughly half the width */
+    }
+}
+@media (max-width: 1024px) {
+    .line-3 {
+        flex-wrap: wrap;    /* Allow cards to wrap to next line */
+        justify-content: center;
+    }
+    
+    .card-cake {
+        flex: 0 1 calc(50% - 20px); /* Take up roughly half the width */
+    }
+}
+
+/* Mobile View: 1 card per row */
+@media (max-width: 600px) {
+    .line-1 {
+        padding: 10px;
+    }
+
+    .card-cake {
+        flex: 0 1 100%;     /* Take up full width */
+        max-width: 300px;   /* Keep it from getting too wide on large phones */
+    }
+}
+
+@media (max-width: 600px) {
+    .line-2 {
+        padding: 10px;
+    }
+
+    .card-cake {
+        flex: 0 1 100%;     /* Take up full width */
+        max-width: 300px;   /* Keep it from getting too wide on large phones */
+    }
+}
+@media (max-width: 600px) {
+    .line-3 {
+        padding: 10px;
+    }
+
+    .card-cake {
+        flex: 0 1 100%;     /* Take up full width */
+        max-width: 300px;   /* Keep it from getting too wide on large phones */
+    }
+}
+
+
+.card-cake{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+.card-cake:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 10px 20px rgba(255,102,196,0.2);
+}
+
+.h1-section3{
+    margin-top: 4rem;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    color: black;
+    font-size: 3.1rem;
+    font-weight: 600;
+
+
+}
+.card-cake figcaption{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+}
+
+.section-4{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.newsletter-disc{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+    margin-top: none;
+    margin: none;
+}
+
+.section-4 input{
+    border: 2px solid #ff66c4 ;
+    border-radius: 15px;
+    font-size: 2rem;
+    height: 3rem;
+    margin-top: none;
+   box-shadow: 0 8px 10px #ff66c4 ;
+   font-family: "Cormorant Garamond", serif;
+
+}
+
+.section-4 input::placeholder {
+    font-size: 1.5rem;
+    color: black;
+    
+}
+
+.section-4 input:focus::placeholder{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.news button{
+    border: 2px solid #ff66c4;
+    background-color: white;
+    font-size: 1rem;
+    border-radius: 20px;
+    height: 35px;
+    box-shadow: 5px 0px 5px #ff66c4 ;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 800;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.section-4{
+    margin-top: 2rem;
+}
+.h1-section4{
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    color: black;
+    font-size: 3.1rem;
+    font-weight: 600;
+
+}
+.news{
+    margin-top: 1rem;
+}
+.news button:hover{
+    background-color: rgb(255, 255, 200);
+    
+}
+
+@media (max-width: 480px) {
+    .news {
+        flex-direction: column; /* Stacks input and button */
+        width: 100%;
+    }
+    
+    #email-box, .news button {
+        width: 100%; /* Full width on mobile */
+        flex: none;
+    }
+
+    .h1-section4 {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 480px) {
+    /* News Section Styling */
+    .news {
+        flex-direction: column; 
+        width: 100%;
+        gap: 10px; /* Space between input and button */
+    }
+    
+    #email-box, .news button {
+        width: 100%; 
+        flex: none;
+        height: 50px; /* Better for thumb tapping */
+    }
+
+    /* Typography */
+    .h1-section4 {
+        font-size: 1.8rem;
+    }
+
+    /* Footer adjustments for small screens */
+    h1 {
+        font-size: 22px;
+    }
+
+    #foot-pagra {
+        font-size: 13px;
+    }
+
+    .foot-follow .icon-social {
+        font-size: 2rem; /* Slightly smaller icons for small screens */
+        margin: 0 15px;
+    }
+}
+
+footer {
+    background-color: #fffae6;
+    width: 100%;
+    display: flex; /* Creates the two-column layout */
+    justify-content: center; /* Centers the image vertically against the text */
+    flex: 1;
+    gap: none;
+    overflow: hidden;
+    margin-top: 5rem;
+    height: fit-content;
+}
+
+/* LEFT SIDE: Image takes 50% */
+.footer-image-left {
+    flex:1; 
+    display: flex;
+    justify-content: center; /* Centers image inside its half */
+    margin-left: none;
+}
+
+#mouse-img {
+    flex: 0 0 50%;
+    width: 100%; /* Scale image to fill most of its half */
+    min-width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 12%;
+}
+
+/* RIGHT SIDE: Information takes 50% */
+.footer-content-right {
+    margin-top: 2rem;
+   flex: 0 0 50%;
+    display: flex;
+    flex-direction: column; /* Stacks all info vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Space between sections */
+    
+}
+
+/* Adjustments for the content pieces */
+.foot-dis #foot-logo {
+    height: 200x;
+    width: 270px;
+}
+.foot-dis p{
+    width: 20rem;
+    font-family:  "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.foot-sitemap-container {
+    display: flex;
+    gap: 2rem; /* Side-by-side sitemap columns */
+}
+
+.sitemap-section h2 {
+    font-size: 3rem;
+    
+}
+
+.sitemap-section ul {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.foot-our h1 {
+    font-size: 3rem;
+    text-align: left; /* Keep everything left-aligned in the column */
+}
+
+.foot-our p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.icon-social {
+    font-size: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+.foot-follow p{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Responsive: On mobile, stack them on top of each other */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+    .footer-image-left, .footer-content-right {
+        flex: 0 0 100%;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+    .footer-content-right {
+        align-items: center; /* Centers text on mobile */
+    }
+    .foot-our h1, .foot-our p {
+        text-align: center;
+    }
+    .icon-social {
+        justify-content: center;
+    }
+}

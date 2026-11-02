@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="file.css/pagesign-in.css">
+     <script src="https://kit.fontawesome.com/6e750bc908.js" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet"></head>
+
+</head>
+<body>
+    <header class="main-header"> 
+       
+        <nav class="nav-links">
+            <div class="menu-items">
+                <a  href="index.html">Home </a>
+                <a href="pagecontact.html">Contact us</a>
+                <a href="pageaboutus.html">About us</a>
+            </div>
+            
+            <div class="icons">
+                <a href="pageshop.html"> <span class="icon-bag"><i class="fa-solid fa-bag-shopping"></i></span></a>
+                <a href="pagesign-in.html"> <span class="icon-user"><i class="fa-solid fa-user" ></i></span></a>
+            </div>        
+        </nav>
+    </header>
+    <main>
+    <div class="sign-in">
+        
+        <div class="logo2">
+            <img src="images/logo2.png" alt="email-Logo" id="logo2">
+        </div>
+        <div class="email-form">
+                        <div class="bgr-email">
+                            <img src="images/bgr-email.png" alt="background-email" id="bgr-email">
+                        </div>
+                        <div class="form-email">
+                            <div class="form-email">
+                <form id="king-cake-form" class="auth-form">
+                    <i class="fa-solid fa-user" id="user-icon"></i>
+                    <div class="input-group">
+                        <label for="username">Name</label>
+                        <input type="text" id="username" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="useremail">Email</label>
+                        <input type="email" id="useremail" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="userphone">Number phone</label>
+                        <input type="tel" id="userphone" placeholder="Enter phone number">
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">EATE</button>
+                    
+                    <a href="#" class="link-signup" id="Switch-to-login">
+                        <p>Đã có tài khoản? <strong>Log In</strong></p>
+                    </a>
+                    
+                    <a href="#" class="link-policy">
+                        <p>Information of policy</p>
+                    </a>
+                </form>
+
+                <form id="login-form" class="auth-form hidden">
+                    <h2 style="text-align: center;">Welcome Back</h2>
+
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="email@example.com" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="••••••••" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">LOG IN</button>
+                    
+                    <div class="form-footer">
+                        <a href="#" class="link-policy"><p>Forgot Password?</p></a>
+                        <a href="#" class="link-signup" id="Switch-to-signup">
+                            <p>Don't have an account? <strong>Sign Up</strong></p>
+                        </a>
+                    </div>
+                </form>
+            </div>
+            </div>
+         </div>
+
+    </div>
+
+    </main>
+        <footer>
+        
+            <div class="foot-dis">
+                <img src="images/fottlogo.png" alt="logo-cake" id="foot-logo">
+                <p id="foot-pagra">Bakery made by Vietnamese  Baker but the flavor like When you eat Cake at London or France. 
+                    The our qualities is  alway in our head of our product.</p>
+            </div>
+
+            <div class="foot-our">
+                <h1> Our Bakery</h1>
+                <p> 253 Tandinh,Q1, TP Ho Chi Minh</p><br>
+                <p>kingcake886@gmail.com</p><br>
+                <p><i class="fa-solid fa-phone" style="color: #dd00ae;"></i> +8932254332</p>
+
+            </div>
+
+            <div class="foot-follow">
+                <h1> Follow US</h1>
+                <div class="icon-social">
+                 <i class="fa-brands fa-facebook" style="color: rgb(0, 117, 249);"></i>
+                <i class="fa-brands fa-instagram" style="color: rgb(229, 94, 31);"></i>
+                <i class="fa-brands fa-tiktok" style="color: black;"></i>
+
+                </div>
+
+                <P><i class="fa-regular fa-registered" style="color: black;"></i> Copyright 2014</P>
+              
+            </div>
+
+
+    
+    </footer>
+
+    <script src="file.js/sign-in.js"></script>
+</body>
+</html>

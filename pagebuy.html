@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy</title>
+        <link rel="stylesheet" href="file.css/pagebuy.css">
+         <script src="https://kit.fontawesome.com/6e750bc908.js" crossorigin="anonymous"></script>
+            
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="main-header"> 
+       
+        <nav class="nav-links">
+            <div class="menu-items">
+                <a  href="index.html">Home </a>
+                <a href="pagecontact.html">Contact us</a>
+                <a href="pageaboutus.html">About us</a>
+             </div>
+            
+                <div class="icons">
+                <a href="pageshop.html"> <span class="icon-bag"><i class="fa-solid fa-bag-shopping"></i></span></a>
+                <a href="pagesign-in.html"> <span class="icon-user"><i class="fa-solid fa-user" ></i></span></a>
+            </div>        
+        </nav>
+    </header>
+    <main>
+        <section class="section-1">
+            <div class="buy-inform">
+                 <div class="right-bill">
+                        <img src="images/no-cake.png" alt="no-cake" id="img-bill">
+                        <span class="inform-order">
+                        <p id="namecake"> Name Cake</p> 
+                        <input type="text" id="amount-order">
+                        </span><br>
+                        <span class="sale-code">
+                            <input type="text" id="sale-code" placeholder="Mã giảm giá"> 
+                            <button type="submit" id="sale-btn">Áp dụng</button>
+
+                        </span>
+
+                      <div class="bill-order">
+                        <h3>
+                            Tổng Cộng Thánh Toán
+                        </h3>
+                        <p>Tạm Tính <span id="tam-tinh">0.0VND</span></p>
+                        <span class="vertical-line"></span>
+                        <P>VAT(10%)<span id="vat-val"></span></P>
+                        <span class="vertical-line"></span>
+                        <p>Tổng <span id="tong-val"> </span></p>
+                        <span class="vertical-line"></span>
+                       
+                    </div>
+                  
+                </div>
+                <div class="left-bill">
+                        <h2>Thanh Toán và Giao Hàng</h2>
+
+                        <div class="container">
+                    <h1>Thông tin tài khoản</h1>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="full_name">Họ và tên <span class="required">*</span></label>
+                            <input type="text" id="full_name" placeholder="Họ tên của bạn" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại <span class="required">*</span></label>
+                            <input type="tel" id="phone" placeholder="Số điện thoại" required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="email">Địa chỉ email (tuỳ chọn)</label>
+                        <input type="email" id="email" placeholder="Email của bạn">
+                    </div>
+
+                    <h2>Thông tin Giao hàng</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">Tỉnh/Thành phố <span class="required">*</span></label>
+                            <select id="city" required>
+                                <option value="" disabled selected>Chọn Tỉnh/Thành phố</option>
+                                <option value="ho_chi_minh">Hồ Chí Minh</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="district">Quận/Huyện <span class="required">*</span></label>
+                            <select id="district" required>
+                                <option value="" disabled selected>Chọn quận huyện</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ward">Xã/Phường <span class="required">*</span></label>
+                            <select id="ward" required>
+                                <option value="" disabled selected>Chọn xã/phường</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa chỉ <span class="required">*</span></label>
+                            <input type="text" id="address" placeholder="Ví dụ: Số 20, ngõ 90" required>
+                        </div>
+                        </div>
+                            <button type="submit" id="paid">Thanh Toán</button>
+                         </div>
+                            </div>
+                </div>
+        </section>
+    </main>
+            <footer>
+        
+        <div class="foot-dis">
+            <img src="images/fottlogo.png" alt="logo-cake" id="foot-logo">
+            <p id="foot-pagra">Bakery made by Vietnamese  Baker but the flavor like When you eat Cake at London or France. 
+                The our qualities is  alway in our head of our product.</p>
+        </div>
+
+        <div class="foot-our">
+            <h1> Our Bakery</h1>
+            <p> 253 Tandinh,Q1, TP Ho Chi Minh</p><br>
+            <p>kingcake886@gmail.com</p><br>
+            <p><i class="fa-solid fa-phone" style="color: #dd00ae;"></i> +8932254332</p>
+
+        </div>
+
+        <div class="foot-follow">
+            <h1> Follow US</h1>
+            <div class="icon-social">
+             <i class="fa-brands fa-facebook" style="color: rgb(0, 117, 249);"></i>
+            <i class="fa-brands fa-instagram" style="color: rgb(229, 94, 31);"></i>
+            <i class="fa-brands fa-tiktok" style="color: black;"></i>
+
+            </div>
+
+            <P><i class="fa-regular fa-registered" style="color: black;"></i> Copyright 2014</P>
+          
+        </div>
+
+
+
+</footer>
+    <script src="file.js/pagebuy.js"></script>
+</body>
+</html>

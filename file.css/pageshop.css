@@ -1,0 +1,448 @@
+body{
+    background-color: #fdf6ff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    
+    
+}
+.main-header{
+    display: flex ;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    width:70%;
+    box-sizing: border-box;
+    background-color: #ff66c4;
+    height:100px ;
+    gap: 10px;
+    border-radius: 20px;
+    
+}
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-wrap:nowrap; /* Allows items to jump to a new line */
+        padding: 15px;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        box-sizing: border-box;
+    }
+
+    .search-container {
+        display: none; 
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    /* Reset the header to stack vertically */
+    .main-header {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        gap: 20px;
+    }
+
+    /* Reset margins that are pusing things off-screen */
+    .nav-links, .logo, .cake-icon {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    /* Fix the Strawbery Cake image size */
+    .straw {
+        width: 100%; /* Make the cake fit the screen width */
+        height: auto; /* Keep the aspect ratio */
+    }
+    #sugges{
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+        display: block;
+    }
+    .search-container{
+        display: none;
+        
+    }
+        /* Fix the text description */
+        #describe {
+            margin-left: 0; /* Remove the 4rem pushing it right */
+            max-width: 100%;
+            font-size: 1rem; /* Make it readable */
+        }
+}
+.logo{
+    display: flex;
+    gap: 0;
+
+
+}
+.cake-icon{
+    display: flex;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+   
+    margin-top: 2rem;
+    
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: black;
+    font-size: 1.2rem;
+   
+}
+.nav-links a:hover{
+   color: #ffffcf;
+}
+.icons{
+    display: flex;
+    font-size: 1.5rem;
+    gap: 8px;
+    color: black;
+    margin-right: 2rem;
+}
+ .icons a:hover{
+    color:#ffffcf;
+ }
+.menu-items a {
+    margin-right: 1rem;
+    gap: 0.5rem;
+}
+
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+.section-1{
+  margin-top: 3rem;
+}
+
+.shop{
+  width: 100%;
+  height: 100%;
+  display: block;
+  justify-content: center;
+
+}
+h2{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.ver-line{
+  margin-top: none;
+  border-bottom: 5px solid black;
+  width: 30rem;
+  display: block;
+
+}
+.inform-order{
+     background-color: white;
+     max-width: 50rem;
+     min-height: 40rem;
+     border-radius: 30px;
+     margin-bottom: 2rem;
+    
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders are single lines */
+  font-family: serif; /* Matches the font style in the image */
+}
+
+.product-table th, 
+.product-table td {
+  border: 2px solid black; /* Thick black borders */
+  padding: 20px;           /* Adds space inside the cells */
+  text-align: center;      /* Centers text horizontally */
+  vertical-align: middle;  /* Centers content vertically */
+}
+
+/* Header specific styling */
+.product-table th {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Layout for the icon and text in the first column */
+.cur-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 80px; /* Adjust based on your image size */
+  height: 80px;
+  border-radius: 8px;
+}
+
+.bill-order {
+    width: 400px; /* Adjust based on your design */
+    font-family: Arial, sans-serif;
+    margin-top: 8rem;
+    
+}
+
+.bill-order p {
+    display: flex;
+    justify-content: space-between; /* This pushes the text to the left and price to the right */
+    align-items: flex-end;
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+}
+
+/* The horizontal line under the text */
+.vertical-line {
+    
+    border-bottom: 2px solid black;
+    margin-bottom: 15px;
+
+}
+
+#paid {
+     text-decoration: none;
+     color: #a0522d;
+    float: right; /* Moves the button to the right */
+    background-color: #a0522d; /* Brownish color from your image */
+    color: #f0e68c; /* Yellowish text */
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .inform-order {
+        width: 95%;
+        margin: 0 auto 2rem auto;
+    }
+
+    .bill-order {
+        width: 100%; /* Takes full width of the container */
+        margin-top: 3rem; /* Reduced from 8rem */
+    }
+
+    .product-table th, 
+    .product-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .vertical-line{
+        display: none;
+    }
+    .icon {
+        width: 60px; /* Smaller icons for tablets */
+        height: 60px;
+    }
+}
+
+/* --- Mobile Styles (max-width: 480px) --- */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+        text-align: center;
+    }
+    .vertical-line{
+        display: none;
+    }
+
+
+    /* Stack Table Cells vertically for readability */
+    .product-table thead {
+        display: none; /* Hide headers on very small screens */
+    }
+
+    .product-table, .product-table tbody, .product-table tr, .product-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .product-table tr {
+        margin-bottom: 1rem;
+        border: 2px solid black;
+    }
+
+    .product-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; /* Make space for labels if needed */
+        text-align: right;
+    }
+
+    .cur-order {
+        flex-direction: column; /* Stack icon and text */
+        gap: 5px;
+    }
+
+    .bill-order {
+        margin-top: 2rem;
+    }
+
+    button {
+        width: 100%; /* Full width button is easier to tap on mobile */
+        float: none;
+    }
+}
+
+footer{
+    background-color:#fffae6 ;
+    width: 100% ;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+     gap: 13rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#foot-logo{
+    margin-top: 3rem;
+    margin-left: 5rem;
+    height: 110px;
+    width: 140px;
+}
+
+.foot-dis p{
+    width: 22rem;
+    text-align: center;
+    font-size: 12px;
+    font-family:  "Cormorant Garamond", serif;
+    font-weight:800;
+}
+
+.foot-our{
+    margin-top: 3rem;
+    
+}
+.foot-our p{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.foot-our h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.foot-follow{
+    margin-top: 3rem;
+}
+.foot-follow h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.foot-follow .icon-social{
+     margin-top: 2.5rem;
+    justify-self: center;
+    font-size: 2.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.foot-follow p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 3rem ;
+}
+@media (max-width: 768px) {
+    /* Stack the footer columns so they don't look squashed */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; /* Space between the stacked sections */
+    }
+
+    .foot-dis, .foot-our, .foot-follow {
+        max-width: 90%; /* Let sections take up more width */
+        text-align: center;
+    }
+
+    .h1-section4 {
+        font-size: 2.2rem;
+    }
+
+    /* Keep news row-based but slightly smaller padding */
+    .news {
+        width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    footer {
+        /* Reduce the big gap from tablet to save vertical space */
+        gap: 25px; 
+        padding: 30px 15px;
+    }
+
+    /* Make the logo a bit smaller so it doesn't take over the screen */
+    #foot-logo {
+        width: 120px;
+    }
+
+    /* Improve readability for the description */
+    #foot-pagra {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+
+    /* Shrink the headings so they fit on one line */
+    .foot-our h1, .foot-follow h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Make the contact info text slightly smaller */
+    .foot-our p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust social icons for thumb-tapping */
+    .foot-follow .icon-social {
+        font-size: 2rem; /* Slightly smaller than desktop but still easy to tap */
+        margin: 0 8px;
+    }
+
+    /* Ensure the copyright text isn't floating too far away */
+    .copyright-text {
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+}

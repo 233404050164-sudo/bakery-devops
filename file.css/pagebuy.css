@@ -1,0 +1,523 @@
+body{
+    background-color:#fdf6ff ;
+    overflow-x: hidden;
+    
+}
+
+.main-header{
+    display: flex ;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    width:70%;
+    box-sizing: border-box;
+    background-color: #ff66c4;
+    height:100px ;
+    gap: 10px;
+    border-radius: 20px;
+    
+}
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Allows items to jump to a new line */
+        padding: 15px;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search-container {
+        order: 3; /* Moves search bar to the bottom row */
+        width: 80%; /* Makes search bar wider */
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    /* Reset the header to stack vertically */
+    .main-header {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    /* Reset margins that are pusing things off-screen */
+    .nav-links, .search-container, .logo, .cake-icon {
+        margin: 0 !important; 
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Fix the Strawbery Cake image size */
+    .straw {
+        width: 100%; /* Make the cake fit the screen width */
+        height: auto; /* Keep the aspect ratio */
+    }
+    #sugges{
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+        display: block;
+    }
+.search-container{
+    position: relative;
+    margin-top: 20px !important;
+    width: 90%;
+    align-self: center;
+}
+    /* Fix the text description */
+    #describe {
+        margin-left: 0; /* Remove the 4rem pushing it right */
+        max-width: 100%;
+        font-size: 1rem; /* Make it readable */
+    }
+}
+@media (max-width: 768px) {
+    .page1 {
+        flex-direction: column; /* Stacks text on top of image */
+        text-align: center;
+        padding: 30px;
+    }
+
+    .image-cake1 {
+        text-align: center;
+        order: 2; /* Ensures image stays below text */
+    }
+
+    .cta-group {
+        justify-content: center; /* Centers the button and phone info */
+    }
+
+    #straw {
+        font-size: 2.5rem;
+    }
+    
+}
+@media (max-width: 480px) {
+    .page1 {
+        padding: 20px 15px;
+    }
+
+    #straw {
+        font-size: 2rem;
+    }
+  
+    #describe {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Stack the button and phone number vertically on small phones */
+    .cta-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-order {
+        width: 100%; /* Full width button is easier to tap */
+        padding: 12px;
+    }
+
+    .image-cake1 img {
+        width: 80%; /* Shrink image slightly so it's not overwhelming */
+    }
+}
+.logo{
+    display: flex;
+    gap: 0;
+
+
+}
+.cake-icon{
+    display: flex;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    gap: 20rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: black;
+    margin-left:25rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-left: 0;
+}
+.nav-links a:hover{
+   color: #ffffcf;
+}
+.icons{
+    display: flex;
+    font-size: 1.5rem;
+    gap: 8px;
+    color: black;
+    margin-right: 2rem;
+}
+ .icons a:hover{
+    color:#ffffcf;
+ }
+.search-container{
+    font-size: 1.5rem;
+    display: flex;
+    border: 2px solid #e57eff;
+    border-radius: 25px;
+    padding: 5px 15px;
+    background: white;
+    box-shadow: 3px 3px 0px #ff66c4;
+    margin-top: 0;
+
+}
+.menu-items a {
+    margin-right: 1rem;
+    gap: 0.5rem;
+}
+
+.glass{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+.section-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.buy-inform{
+    display: flex;
+   
+    background-color: white;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    border-radius: 20px;
+
+}
+
+.right-bill{
+    background-color: #fff6de;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.sale-code{
+    display: flex;
+    align-items: center;
+}
+
+.right-bill img{
+    width: 14rem;
+    border-radius: 12px;
+    
+}
+
+.inform-order{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    
+}
+
+.inform-order p{
+    font-family: "Playwrite NO", cursive;
+    font-weight: 700;
+}
+
+.inform-order input{
+    width: 35px;
+    height: 25px;
+    border: 2px solid #ff66c4;
+    border-radius: 8px;
+}
+
+.bill-order {
+    width: 400px; /* Adjust based on your design */
+    font-family: Arial, sans-serif;
+    margin-top: 3rem;
+    
+    
+}
+
+.bill-order p {
+    display: flex;
+    justify-content: space-between; /* This pushes the text to the left and price to the right */
+    align-items: flex-end;
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+}
+
+/* The horizontal line under the text */
+.vertical-line {
+    
+    border-bottom: 2px solid black;
+    margin-bottom: 15px;
+
+}
+
+#sale-code ::placeholder{
+    font-style: italic;
+}
+
+#sale-code{
+    width:15rem;
+    height: 3rem;
+    border: 2px solid #ffde59;
+    border-radius: 12px;
+}
+
+#sale-btn{
+    background-color:#fdcd82;
+    border: 2px solid #ffde59;
+    color: black;
+    cursor: pointer;
+     margin-left: 8px;
+    height: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 12px;
+}
+.left-bill{
+    width: fit-content;
+}
+.container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #555;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex-basis: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    flex-basis: 100%;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: red;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+#paid {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #fdcd82;
+    color:black;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#paid:hover {
+    background-color: #ffe872;
+}
+
+footer{
+    background-color:#fffae6 ;
+    width: 100% ;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+     gap: 13rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#foot-logo{
+    margin-top: 3rem;
+    margin-left: 5rem;
+    height: 110px;
+    width: 140px;
+}
+
+.foot-dis p{
+    width: 22rem;
+    text-align: center;
+    font-size: 12px;
+    font-family:  "Cormorant Garamond", serif;
+    font-weight:800;
+}
+
+.foot-our{
+    margin-top: 3rem;
+    
+}
+.foot-our p{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.foot-our h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.foot-follow{
+    margin-top: 3rem;
+}
+.foot-follow h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.foot-follow .icon-social{
+     margin-top: 2.5rem;
+    justify-self: center;
+    font-size: 2.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.foot-follow p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 3rem ;
+}
+@media (max-width: 768px) {
+    /* Stack the footer columns so they don't look squashed */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; /* Space between the stacked sections */
+    }
+
+    .foot-dis, .foot-our, .foot-follow {
+        max-width: 90%; /* Let sections take up more width */
+        text-align: center;
+    }
+
+    .h1-section4 {
+        font-size: 2.2rem;
+    }
+
+    /* Keep news row-based but slightly smaller padding */
+    .news {
+        width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    footer {
+        /* Reduce the big gap from tablet to save vertical space */
+        gap: 25px; 
+        padding: 30px 15px;
+    }
+
+    /* Make the logo a bit smaller so it doesn't take over the screen */
+    #foot-logo {
+        width: 120px;
+    }
+
+    /* Improve readability for the description */
+    #foot-pagra {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+
+    /* Shrink the headings so they fit on one line */
+    .foot-our h1, .foot-follow h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Make the contact info text slightly smaller */
+    .foot-our p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust social icons for thumb-tapping */
+    .foot-follow .icon-social {
+        font-size: 2rem; /* Slightly smaller than desktop but still easy to tap */
+        margin: 0 8px;
+    }
+
+    /* Ensure the copyright text isn't floating too far away */
+    .copyright-text {
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,567 @@
+body{
+    background-color: #f9f3f8;
+    width: 100% ;
+    overflow-x: hidden;
+    
+    
+}
+.main-header{
+    display: flex ;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    width:70%;
+    box-sizing: border-box;
+    background-color: #ff66c4;
+    height:100px ;
+    gap: 10px;
+    border-radius: 20px;
+    
+}
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Allows items to jump to a new line */
+        padding: 15px;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search-container {
+        order: 3; /* Moves search bar to the bottom row */
+        width: 80%; /* Makes search bar wider */
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    /* Reset the header to stack vertically */
+    .main-header {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    /* Reset margins that are pusing things off-screen */
+    .nav-links, .search-container, .logo, .cake-icon {
+        margin: 0 !important; 
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Fix the Strawbery Cake image size */
+    .straw {
+        width: 100%; /* Make the cake fit the screen width */
+        height: auto; /* Keep the aspect ratio */
+    }
+    #sugges{
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+        display: block;
+    }
+.search-container{
+    position: relative;
+    margin-top: 20px !important;
+    width: 90%;
+    align-self: center;
+}
+    /* Fix the text description */
+    #describe {
+        margin-left: 0; /* Remove the 4rem pushing it right */
+        max-width: 100%;
+        font-size: 1rem; /* Make it readable */
+    }
+}
+@media (max-width: 768px) {
+    .page1 {
+        flex-direction: column; /* Stacks text on top of image */
+        text-align: center;
+        padding: 30px;
+    }
+
+    .image-cake1 {
+        text-align: center;
+        order: 2; /* Ensures image stays below text */
+    }
+
+    .cta-group {
+        justify-content: center; /* Centers the button and phone info */
+    }
+
+    #straw {
+        font-size: 2.5rem;
+    }
+    
+}
+@media (max-width: 480px) {
+    .page1 {
+        padding: 20px 15px;
+    }
+
+    #straw {
+        font-size: 2rem;
+    }
+  
+    #describe {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Stack the button and phone number vertically on small phones */
+    .cta-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-order {
+        width: 100%; /* Full width button is easier to tap */
+        padding: 12px;
+    }
+
+    .image-cake1 img {
+        width: 80%; /* Shrink image slightly so it's not overwhelming */
+    }
+}
+.logo{
+    display: flex;
+    gap: 0;
+
+
+}
+.cake-icon{
+    display: flex;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    gap: 20rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: black;
+    margin-left:25rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-left: 0;
+}
+.nav-links a:hover{
+   color: #ffffcf;
+}
+.icons{
+    display: flex;
+    font-size: 1.5rem;
+    gap: 8px;
+    color: black;
+    margin-right: 2rem;
+}
+ .icons a:hover{
+    color:#ffffcf;
+ }
+.search-container{
+    font-size: 1.5rem;
+    display: flex;
+    border: 2px solid #e57eff;
+    border-radius: 25px;
+    padding: 5px 15px;
+    background: white;
+    box-shadow: 3px 3px 0px #ff66c4;
+    margin-top: 0;
+
+}
+.menu-items a {
+    margin-right: 1rem;
+    gap: 0.5rem;
+}
+
+.glass{
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.nav-links a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+
+.sign-in{
+    display: flex;
+    margin-top: 1rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+.logo2{
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    margin-top: 8rem;
+}
+.logo2 img{
+    width: 70%;
+    height: 70%;
+}
+.email-form{
+    flex: 1;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    
+}
+.bgr-email {
+    width: 100%;
+    height: 100%;
+}
+.bgr-email img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    
+}
+.form-email {
+    position: relative;
+    z-index: 2; /* Sits on top of background image */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Light frost effect */
+}
+
+/* Stylized Phone-like Border */
+.form-email::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    border: 2px solid #000;
+    border-radius: 40px;
+}
+
+/* Container must be relative so children can be absolute */
+.email-form {
+    flex: 1;
+    width: 50%;
+    height: 100vh; /* Match screen height */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The background image stays behind */
+.bgr-email {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bgr-email img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* The form container floats on top */
+.form-email {
+    position: relative;
+    z-index: 2; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* Ensures no white background */
+}
+
+/* Your 'Phone' border effect */
+.form-email::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 520px;
+    border: 3px solid #000;
+    border-radius: 40px;
+    pointer-events: none; /* Allows you to click the inputs through the border */
+}
+
+/* Styling the inputs to be clear and readable over an image */
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white so text is readable */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#sign-in{
+    text-align: center;
+    color:#448aff;
+    margin: none;
+}
+/* 1. Form Container */
+.auth-form {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 280px; /* Adjusted to fit inside your phone border */
+}
+
+/* 2. Input Groups and Labels */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-group input {
+    border-radius: 15px;
+    border: 2px solid #000;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.9); /* Keeps it readable over the background */
+    outline: none;
+}
+
+/* 3. Submit Button */
+.btn-submit {
+    background: #e95d5d;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #d84b4b;
+}
+
+/* 4. Links and Footer Text */
+.link-signup p {
+    text-align: center;
+    margin: 0;
+    color: #000;
+}
+
+.link-policy p {
+    text-align: center;
+    font-size: 12px;
+    color: #448aff;
+    margin-top: -10px; /* Pulls it closer to the sign-up link */
+}
+
+.auth-form a {
+    text-decoration: none;
+}
+
+#user-icon{
+    align-self: center;
+    font-size: 2rem;
+    color: #000;
+}
+/* Styling for the form title */
+.auth-form h2 {
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Specific footer styling for login */
+.form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Add a focus effect so the user knows which box they are typing in */
+.input-group input:focus {
+    border-color: #e95d5d;
+    background: white;
+    box-shadow: 0 0 5px rgba(233, 93, 93, 0.3);
+}
+
+.hidden{
+    display: none !important;
+}
+
+.auth-form{
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn{
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer{
+    background-color:#fffae6 ;
+    width: 100% ;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+     gap: 13rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#foot-logo{
+    margin-top: 3rem;
+    margin-left: 5rem;
+    height: 110px;
+    width: 140px;
+}
+
+.foot-dis p{
+    width: 22rem;
+    text-align: center;
+    font-size: 12px;
+    font-family:  "Cormorant Garamond", serif;
+    font-weight:800;
+}
+
+.foot-our{
+    margin-top: 3rem;
+    
+}
+.foot-our p{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.foot-our h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.foot-follow{
+    margin-top: 3rem;
+}
+.foot-follow h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.foot-follow .icon-social{
+     margin-top: 2.5rem;
+    justify-self: center;
+    font-size: 2.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.foot-follow p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 3rem ;
+}
+@media (max-width: 768px) {
+    /* Stack the footer columns so they don't look squashed */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; /* Space between the stacked sections */
+    }
+
+    .foot-dis, .foot-our, .foot-follow {
+        max-width: 90%; /* Let sections take up more width */
+        text-align: center;
+    }
+
+    .h1-section4 {
+        font-size: 2.2rem;
+    }
+
+    /* Keep news row-based but slightly smaller padding */
+    .news {
+        width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    footer {
+        /* Reduce the big gap from tablet to save vertical space */
+        gap: 25px; 
+        padding: 30px 15px;
+    }
+
+    /* Make the logo a bit smaller so it doesn't take over the screen */
+    #foot-logo {
+        width: 120px;
+    }
+
+    /* Improve readability for the description */
+    #foot-pagra {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+
+    /* Shrink the headings so they fit on one line */
+    .foot-our h1, .foot-follow h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Make the contact info text slightly smaller */
+    .foot-our p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust social icons for thumb-tapping */
+    .foot-follow .icon-social {
+        font-size: 2rem; /* Slightly smaller than desktop but still easy to tap */
+        margin: 0 8px;
+    }
+
+    /* Ensure the copyright text isn't floating too far away */
+    .copyright-text {
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+}

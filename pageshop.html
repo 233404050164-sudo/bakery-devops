@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+        <link rel="stylesheet" href="file.css/pageshop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6e750bc908.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+        <header class="main-header"> 
+
+        <nav class="nav-links">
+        <div class="menu-items">
+                <a  href="index.html">Home </a>
+                <a href="pagecontact.html">Contact us</a>
+                <a href="pageaboutus.html">About us</a>
+            </div>
+            
+            <div class="icons">
+                <a href="pageshop.html"> <span class="icon-bag"><i class="fa-solid fa-bag-shopping"></i></span></a>
+                <a href="pagesign-in.html"> <span class="icon-user"><i class="fa-solid fa-user" ></i></span>
+            </a>
+            </div>        
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-1">
+        <div class="shop">
+                <h2 class="shop-order">Giỏ Hàng</h2>
+            <span class="ver-line"></span>
+            <div class="inform-order">
+                <img src="images/Icon-shop.png" alt="icon-welcom">
+               
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Sản Phẩm</th>
+                                <th>Giá</th>
+                                <th>Số Lượng</th>
+                                <th>Tạm Tính</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                        <div class="cur-order">
+                                            <img src="images/no-cake.png" alt="no-cake" class="icon" id="shop-img">
+                                            <span id="shop-name">Strawberry cake</span>
+                                        </div>
+                                </td>
+                                    
+                                    <td class="price" id="shop-price">0.0vnd</td>
+                                    <td><input type="number" class="qty-input" value="1" min="0" oninput="getdatatable()"></td>
+                                    <td id="tam-tinh-table"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="bill-order">
+                        <h3>
+                            Tổng Cộng Thánh Toán
+                        </h3>
+                        <p>Tạm Tính <span id="tam-tinh">0.0VND</span></p>
+                        <span class="vertical-line"></span>
+                        <P>VAT(10%)<span id="vat-val"></span></P>
+                        <span class="vertical-line"></span>
+                        <p>Tổng <span id="tong-val"> </span></p>
+                        <span class="vertical-line"></span>
+                        <a href="pagebuy.html" id="paid">
+                             Thanh Toán Thôi 📦
+                        </a>
+                       
+                    </div>
+                
+            </div>
+
+        </div>
+        
+    </section>
+
+    
+    </main>
+        <footer>
+        
+        <div class="foot-dis">
+            <img src="images/fottlogo.png" alt="logo-cake" id="foot-logo">
+            <p id="foot-pagra">Bakery made by Vietnamese  Baker but the flavor like When you eat Cake at London or France. 
+                The our qualities is  alway in our head of our product.</p>
+        </div>
+
+        <div class="foot-our">
+            <h1> Our Bakery</h1>
+            <p> 253 Tandinh,Q1, TP Ho Chi Minh</p><br>
+            <p>kingcake886@gmail.com</p><br>
+            <p><i class="fa-solid fa-phone" style="color: #dd00ae;"></i> +8932254332</p>
+
+        </div>
+
+        <div class="foot-follow">
+            <h1> Follow US</h1>
+            <div class="icon-social">
+             <i class="fa-brands fa-facebook" style="color: rgb(0, 117, 249);"></i>
+            <i class="fa-brands fa-instagram" style="color: rgb(229, 94, 31);"></i>
+            <i class="fa-brands fa-tiktok" style="color: black;"></i>
+
+            </div>
+
+            <P><i class="fa-regular fa-registered" style="color: black;"></i> Copyright 2014</P>
+          
+        </div>
+
+
+
+</footer>
+
+    <script src="file.js/pageshop.js"></script>
+</body>
+</html>
