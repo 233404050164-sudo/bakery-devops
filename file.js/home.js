@@ -65,4 +65,3 @@ if (signupForm) {
     });
 }
 
-let x= ;
