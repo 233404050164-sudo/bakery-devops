@@ -65,5 +65,5 @@ if (signupForm) {
     });
 }''
 
- "let x = ;" >> file.js/home.js
+
 
