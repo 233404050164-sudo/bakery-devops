@@ -6,8 +6,12 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
-  check:
+  js-syntax:
+    name: Check JavaScript syntax
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -25,5 +29,17 @@ jobs:
             node --check "$f"
           done
 
-      - name: Check index.html exists
-        run: test -f index.html
+  site-check:
+    name: Check pages and links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check pages, title, links and images
+        run: node scripts/check-site.js
