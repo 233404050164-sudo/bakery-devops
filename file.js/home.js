@@ -63,5 +63,7 @@ if (signupForm) {
         
         alert("Chúc mừng đăng ký thành công");
     });
-}
+}''
+
+ "let x = ;" >> file.js/home.js
 
