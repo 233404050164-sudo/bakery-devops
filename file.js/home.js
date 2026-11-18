@@ -65,5 +65,5 @@ if (signupForm) {
     });
 }''
 
- echo "let x = ;" >> file.js/home.js
+ "let x = ;" >> file.js/home.js
 
