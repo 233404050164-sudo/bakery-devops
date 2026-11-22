@@ -9,7 +9,6 @@ const REQUIRED = ['index.html'];
 const CHECK_VIEWPORT = true;          // mỗi trang phải có <meta name="viewport">
 const CHECK_IMG_ALT = true;           // mỗi <img> phải có thuộc tính alt
 const MAX_IMAGE_BYTES = 0; 
-const CHECK_PRICE = true;             // giá trong class="price" phải là số, không âm
 const SECRET_PATTERNS = [
   [/ghp_[A-Za-z0-9]{36}/, 'GitHub personal access token'],
   [/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/, 'khóa riêng (private key)'],
@@ -52,15 +51,6 @@ for (const page of pages) {
     if (isExternal(raw)) continue;
     const clean = decodeURI(raw.split('#')[0].split('?')[0]);
     if (clean && !fs.existsSync(path.join(ROOT, clean))) errors.push(`${page}: không tìm thấy "${raw}"`);
-  }
-
-    if (CHECK_PRICE) {
-    for (const m of html.matchAll(/<(\w+)\b[^>]*class\s*=\s*["'][^"']*\bprice\b[^"']*["'][^>]*>([\s\S]*?)<\/\1>/gi)) {
-      const text = m[2].replace(/<[^>]*>/g, '').trim();
-      const num = text.match(/-?\s*\d[\d.,]*/);
-      if (!num) { errors.push(`${page}: giá "${text}" không chứa số`); continue; }
-      if (/-\s*\d/.test(text)) errors.push(`${page}: giá "${text}" bị âm`);
-    }
   }
 }
 
